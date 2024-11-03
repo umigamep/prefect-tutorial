@@ -6,7 +6,7 @@ SOURCE_REPO="https://github.com/umigamep/prefect-tutorial.git"
 if __name__ == "__main__":
     flow.from_source(
         source=SOURCE_REPO,
-        entrypoint="sample_flow.py:sample", # Specific flow to run
+        entrypoint="flows/sample_flow.py:overall_flow", # Specific flow to run
     ).deploy(
         name="my-first-deployment",
         work_pool_name="my-work-pool", # Work pool target
